@@ -1,0 +1,175 @@
+{
+  "name": "Dev Container",
+  "dockerFile": "./dockerfile",
+  "context": ".",
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "qwtel.sqlite-viewer",
+        "nicolas-liger.dbml-viewer",
+
+        // Check code spell
+        "streetsidesoftware.code-spell-checker",
+
+        // Docker
+        "ms-azuretools.vscode-docker",
+
+        // Toml
+        "tamasfe.even-better-toml",
+
+        // Yaml
+        "redhat.vscode-yaml",
+
+        // Git
+        "gitlab.gitlab-workflow",
+        "eamodio.gitlens",
+
+        // Graphql
+        "graphql.vscode-graphql",
+        "graphql.vscode-graphql-syntax",
+
+        // Graphics
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "aaron-bond.better-comments",
+        "usernamehw.errorlens",
+
+        // IntelliCode
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+
+        // Python
+        "ms-python.debugpy",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+
+        // Markdown
+        "bierner.markdown-mermaid",
+        "davidanson.vscode-markdownlint",
+        "hnw.vscode-auto-open-markdown-preview",
+        "shd101wyy.markdown-preview-enhanced",
+
+        // Node
+        "esbenp.prettier-vscode",
+
+        // Faker
+        "deerawan.vscode-faker",
+
+        // Autocomplete
+        "codeium.codeium"
+      ],
+      "settings": {
+        "explorer.confirmDelete": false,
+        "files.autoSave": "afterDelay",
+        "terminal.integrated.tabStopWidth": 4,
+        "window.zoomLevel": 1,
+        "codeium.enableConfig": {
+          "*": true
+        },
+        "cSpell.language": "en,uk,ru,cs",
+        "cSpell.ignorePaths": [
+          "node_modules/**",
+          "build/**",
+          "dist/**",
+          "**/*_pb2.py",
+          "**/*_pb2_grpc.py"
+        ],
+        "terminal.integrated.cursorStyle": "line",
+        // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+        "terminal.integrated.cursorStyleInactive": "none",
+        "files.associations": {
+          "*.graphql": "graphql"
+        },
+        "indentRainbow.includedLanguages": ["python", "json", "graphql", "jinja"],
+        "indentRainbow.indicatorStyle": "light",
+        "indentRainbow.lightIndicatorStyleLineWidth": 2,
+        "indentRainbow.colors": [
+          "rgba(255,255,64,0.3)",
+          "rgba(127,255,127,0.3)",
+          "rgba(255,127,255,0.3)",
+          "rgba(79,236,236,0.3)"
+        ],
+      
+        "workbench.colorCustomizations": {
+          "activityBar.background": "#00000020",
+          "statusBar.background": "#00000020",
+          "titleBar.activeBackground": "#00000020",
+          "panelTitle.activeBorder": "#135fb0",
+          "badge.background": "#135fb0",
+          "widget.shadow": "#135fb0",
+          "notificationToast.border": "#135fb0",
+          "notificationsErrorIcon.foreground": "#ff0000",
+          "notificationsWarningIcon.foreground": "#ffee00",
+          "notificationsInfoIcon.foreground": "#0000ff",
+          "editorSuggestWidget.border": "#135fb0"
+        },
+      
+        "terminal.integrated.lineHeight": 1.1,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "remote.autoForwardPortsSource": "hybrid",
+        "pylint.args": ["--disable=missing-module-docstring", "--max-line-length=80"],
+        "workbench.iconTheme": "material-icon-theme",
+        "explorer.fileNesting.patterns": {
+          "*.ts": "${capture}.js",
+          "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+          "*.jsx": "${capture}.js",
+          "*.tsx": "${capture}.ts",
+          "tsconfig.json": "tsconfig.*.json",
+          "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+          "*.sqlite": "${capture}.${extname}-*",
+          "*.db": "${capture}.${extname}-*",
+          "*.sqlite3": "${capture}.${extname}-*",
+          "*.db3": "${capture}.${extname}-*",
+          "*.sdb": "${capture}.${extname}-*",
+          "*.s3db": "${capture}.${extname}-*"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "codeium.enableCodeLens": false,
+        "workbench.editor.enablePreview": false,
+        "black-formatter.args": ["--line-length", "80"],
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+          },
+          "editor.rulers": [80]
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true,
+          "editor.tabSize": 2,
+          "editor.rulers": [80]
+        },
+        "[vue]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true,
+          "editor.tabSize": 2,
+          "editor.rulers": [80]
+        },
+        "flake8.args": ["--line-length=80"],
+        "pylint.ignorePatterns": [
+          "node_modules/**",
+          "build/**",
+          "dist/**",
+          "**/grpc/*"
+        ],
+        "prettier.printWidth": 80,
+        "prettier.tabWidth": 2,
+        "git.suggestSmartCommit": false,
+        "editor.minimap.enabled": false,
+        "markdownlint.config": {
+          "no-inline-html": false
+        }
+      }
+    }
+  }
+}
