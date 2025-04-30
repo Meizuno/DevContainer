@@ -48,7 +48,9 @@ RUN tar -xf Python-3.12.0.tgz && \
 
 # Install Node.js 22.x
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
-    apt-get install -y nodejs 
+    apt-get install -y nodejs && \
+    npm install -g npm@11.3.0 && \
+    npm install -g yarn
 
 # Install PostgreSQL
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -c | awk '{print $2}')-pgdg main" | tee /etc/apt/sources.list.d/pgdg.list && \
