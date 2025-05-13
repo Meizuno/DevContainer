@@ -57,6 +57,10 @@
         // Node
         "esbenp.prettier-vscode",
 
+        // Vue
+        "wscats.vue",
+        "vue.volar",
+
         // Faker
         "deerawan.vscode-faker",
 
